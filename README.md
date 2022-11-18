@@ -8,21 +8,32 @@
 
 ## Running commands
 
-To use virtual environment isolating packages dependencies locally:
+To install dependencies, run:
 
 ```bash
-python3 -m venv env
-source env/bin/activate
+pipenv install
 ```
 
-To fire up the server type:
+To activate this project's virtualenv:
 
 ```bash
-python manage.py runserver
+pipenv shell
 ```
 
-To get all users:
+To fire up the `API` type:
+
+```bash
+python3 manage.py runserver --noreload
+```
+
+To get all users type the following in your terminal:
 
 ```bash
 curl -H 'Accept: application/json; indent=4' -u admin:admin123 http://127.0.0.1:8000/users/
+```
+
+To leave your virtual environment:
+
+```bash
+exit
 ```
