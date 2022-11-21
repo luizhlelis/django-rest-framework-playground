@@ -1,8 +1,6 @@
-from datetime import date
 from django.contrib.auth.models import User
 
 import pytest
-import base64
 
 @pytest.mark.django_db
 class TestUserAPIView:
