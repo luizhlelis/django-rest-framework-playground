@@ -6,21 +6,19 @@
 
 - [Python](https://www.python.org/downloads/)
 
-## Running commands
+- [Poetry](https://python-poetry.org/docs/) (if you want to run the API locally)
 
-To install dependencies, run:
+- [Docker](https://www.docker.com/products/docker-desktop/) (if you want to run the API in containers)
 
-```bash
-pipenv install
-```
+## Running commands (poetry and virtual environment)
 
 To activate this project's virtualenv:
 
 ```bash
-pipenv shell
+poetry shell
 ```
 
-To fire up the `API` type:
+To fire up the `API`, type:
 
 ```bash
 python3 manage.py runserver --noreload
@@ -37,3 +35,5 @@ To leave your virtual environment:
 ```bash
 exit
 ```
+
+## Running commands (docker)
