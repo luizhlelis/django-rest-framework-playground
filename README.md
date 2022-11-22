@@ -12,10 +12,28 @@
 
 ## Running commands (poetry and virtual environment)
 
+To up the containerized database:
+
+```bash
+docker-compose up db
+```
+
+To apply the migrations:
+
+```bash
+python manage.py migrate
+```
+
 To activate this project's virtualenv:
 
 ```bash
 poetry shell
+```
+
+To create a superuser on django admin:
+
+```bash
+python manage.py createsuperuser
 ```
 
 To fire up the `API`, type:
