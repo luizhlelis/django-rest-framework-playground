@@ -17,7 +17,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
-        fields = ('category', 'subcatgeory', 'name', 'amount')
+        fields = ('category', 'subcategory', 'name', 'amount')
     # def validate(self, attrs):
     #     return super().validate(attrs)
 

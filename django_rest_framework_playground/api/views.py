@@ -29,10 +29,6 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 @api_view(['POST'])
 def create_item(request):
-    data = ItemSerializer(instance=request, data=request.data)
-  
-    if data.is_valid():
-        data.save()
-        return Response(data.data)
-    else:
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+    serializer = ItemSerializer(data=request.data)
+    serializer.save()
+    return Response(serializer.data, status=status.HTTP_201_CREATED)
