@@ -18,3 +18,15 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = ('category', 'subcatgeory', 'name', 'amount')
+    # def validate(self, attrs):
+    #     return super().validate(attrs)
+
+class ErrorDetailsSerializer(serializers.Serializer):
+    field_related_errors = serializers.JSONField(required=False)
+    requestId = serializers.UUIDField()
+    msg = serializers.CharField(required=False)
+
+class GlobalErrorSerializer(serializers.Serializer):
+    error = ErrorDetailsSerializer()
+    status_code = serializers.IntegerField()
+    type = serializers.CharField()

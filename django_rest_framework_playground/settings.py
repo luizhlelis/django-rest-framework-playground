@@ -29,7 +29,8 @@ ALLOWED_HOSTS = []
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
+    "EXCEPTION_HANDLER": "django_rest_framework_playground.api.global_exception_handler.exception_handler",
 }
 
 # Application definition
@@ -42,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'django_rest_framework_playground.api'
+    'django_rest_framework_playground.api',
+    'request_id_django_log'
 ]
 
 MIDDLEWARE = [
@@ -53,7 +55,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "request_id_django_log.middleware.RequestIdDjangoLog",
 ]
+
+REQUEST_ID_CONFIG = {
+    "REQUEST_ID_HEADER": "HTTP_X_REQUEST_ID",
+    "GENERATE_REQUEST_ID_IF_NOT_FOUND": True,
+    "RESPONSE_HEADER_REQUEST_ID": "HTTP_X_REQUEST_ID",
+}
 
 ROOT_URLCONF = 'django_rest_framework_playground.urls'
 

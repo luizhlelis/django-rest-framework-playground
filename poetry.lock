@@ -104,6 +104,14 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "request-id-django-log"
+version = "0.2.0"
+description = "A simple way to implement request_id in Django"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "sqlparse"
 version = "0.4.3"
 description = "A non-validating SQL parser."
@@ -122,7 +130,7 @@ python-versions = ">=2"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "3821334c03b9cf0eb6450abea93ad4f1b4ad7d66075cf2f60d5d159eabb4804b"
+content-hash = "dba6a8ff48df77970e63f06fd2c04f101ed8ae2cb176c9de8a3a78dff6cf5ff6"
 
 [metadata.files]
 asgiref = [
@@ -243,6 +251,10 @@ psycopg2-binary = [
 pytz = [
     {file = "pytz-2022.6-py2.py3-none-any.whl", hash = "sha256:222439474e9c98fced559f1709d89e6c9cbf8d79c794ff3eb9f8800064291427"},
     {file = "pytz-2022.6.tar.gz", hash = "sha256:e89512406b793ca39f5971bc999cc538ce125c0e51c27941bef4568b460095e2"},
+]
+request-id-django-log = [
+    {file = "request_id_django_log-0.2.0-py3-none-any.whl", hash = "sha256:cd860ebede18c8dace21ea565282521b44ea3f91a5c819baf4adf1d3db8d725c"},
+    {file = "request_id_django_log-0.2.0.tar.gz", hash = "sha256:9a4ee69a5d5f70b8a34938a99de1c4c0878a44f8c3c84d2ab85195b1d15563d9"},
 ]
 sqlparse = [
     {file = "sqlparse-0.4.3-py3-none-any.whl", hash = "sha256:0323c0ec29cd52bceabc1b4d9d579e311f3e4961b98d174201d5622a23b85e34"},
