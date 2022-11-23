@@ -18,22 +18,28 @@ To up the containerized database:
 docker-compose up db
 ```
 
-To apply the migrations:
-
-```bash
-python manage.py migrate
-```
-
 To activate this project's virtualenv:
 
 ```bash
 poetry shell
 ```
 
+To create a new migration file:
+
+```bash
+python3 manage.py makemigrations
+```
+
+To apply the migrations:
+
+```bash
+python3 manage.py migrate
+```
+
 To create a superuser on django admin:
 
 ```bash
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 ```
 
 To fire up the `API`, type:
