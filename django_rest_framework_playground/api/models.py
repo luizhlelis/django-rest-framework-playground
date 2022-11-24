@@ -11,7 +11,7 @@ class Item(models.Model):
     class Meta:
         constraints = [
             models.UniqueConstraint(name='unique_name', fields=['name'])
-        ]       
-  
+        ]
+
     def __str__(self) -> str:
         return self.name

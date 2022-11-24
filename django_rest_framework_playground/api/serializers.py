@@ -18,8 +18,6 @@ class ItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = Item
         fields = ('category', 'subcategory', 'name', 'amount')
-    # def validate(self, attrs):
-    #     return super().validate(attrs)
 
 class ErrorDetailsSerializer(serializers.Serializer):
     field_related_errors = serializers.JSONField(required=False)
